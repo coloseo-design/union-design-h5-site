@@ -22,7 +22,7 @@ const Simulator: React.FC<PageProps> = (props) => {
   const endIndex = currentCode.indexOf('// end');
   const title = startIndex > -1 && endIndex > -1 ? currentCode.slice(startIndex + start.length + 1, endIndex) : '';
   return (
-    <div className="box">
+    <div className="box" style={{ background: '#F5F6F6' }}>
       <div className="box-title">
         {title || name}
       </div>
