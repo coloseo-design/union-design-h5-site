@@ -1,0 +1,329 @@
+export default {
+  design: [
+    {
+      title: '概述',
+      key: 'summary',
+      themeColor: '#D1373D',
+      children: [
+        {
+          title: '设计原则',
+          key: 'design',
+        },
+        {
+          title: '更新说明',
+          key: 'update',
+        },
+      ],
+    },
+    {
+      title: '视觉设计规范',
+      key: 'visual-design',
+      themeColor: '#D6386B',
+      children: [
+        {
+          title: '布局',
+          key: 'layout',
+        },
+        {
+          title: '色彩',
+          key: 'color',
+        },
+        {
+          title: '质感',
+          key: 'texture',
+        },
+        {
+          title: '文字',
+          key: 'font',
+        },
+        {
+          title: '框体',
+          key: 'frame',
+        },
+        {
+          title: '系统图标',
+          key: 'icon',
+        },
+      ],
+    },
+    {
+      title: '组件设计规范',
+      key: 'design-code',
+      themeColor: '#5C57F2',
+      children: [
+        {
+          title: '按钮',
+          key: 'button',
+        },
+        {
+          title: '导航',
+          key: 'navigation',
+        },
+        {
+          title: '数据录入',
+          key: 'data-entry',
+        },
+        {
+          title: '数据展示-通用',
+          key: 'data-currency',
+        },
+        {
+          title: '数据展示-业务',
+          key: 'data-business',
+        },
+        {
+          title: '提示与反馈',
+          key: 'prompt-feedback',
+        },
+      ],
+    },
+  ],
+  develop: [
+    {
+      title: '如何使用',
+      key: 'how-use',
+    },
+    {
+      title: '通用',
+      key: 'components',
+      themeColor: '#D1373D',
+      children: [
+        {
+          title: 'Button 按钮',
+          key: 'button',
+        },
+        {
+          title: 'ButtonList 按钮列表',
+          key: 'button-list',
+        },
+        {
+          title: 'Icon 图标',
+          key: 'icon',
+        },
+        {
+          title: 'Search 搜索',
+          key: 'search',
+        },
+      ],
+    },
+    {
+      title: '布局',
+      key: 'components',
+      themeColor: '#AA3FA8',
+      children: [
+        {
+          title: 'Grid 栅格',
+          key: 'grid',
+        },
+        {
+          title: 'Layout 布局',
+          key: 'layout',
+        },
+        {
+          title: 'Divider 分割线',
+          key: 'divider',
+        },
+      ],
+    },
+    {
+      title: '导航',
+      key: 'components',
+      themeColor: '#AA3FA8',
+      children: [
+        {
+          title: 'Tab 标签页',
+          key: 'tab',
+        },
+        {
+          title: 'Tabbar 标签栏',
+          key: 'tabbar',
+        },
+        {
+          title: 'IndexBar 索引栏',
+          key: 'index-bar',
+        },
+        {
+          title: 'DropdownMenu 下拉菜单',
+          key: 'dropdown-menu',
+        },
+        {
+          title: 'Steps 步骤条',
+          key: 'steps',
+        },
+        {
+          title: 'NavBar 导航栏',
+          key: 'nav-bar',
+        },
+        {
+          title: 'GridLayout 宫格',
+          key: 'grid-layout',
+        },
+      ],
+    },
+    {
+      title: '数据录入',
+      key: 'components',
+      themeColor: '#3B5ED9',
+      children: [
+        {
+          title: 'Uploader 文件上传',
+          key: 'uploader',
+        },
+        {
+          title: 'Cascader 级联选择',
+          key: 'cascader',
+        },
+        {
+          title: 'DatePicker 日期选择',
+          key: 'date-picker',
+        },
+        {
+          title: 'Calendar 日历',
+          key: 'calendar',
+        },
+        {
+          title: 'Field 输入框',
+          key: 'field',
+        },
+        {
+          title: 'Switch 开关',
+          key: 'switch',
+        },
+        {
+          title: 'Slider 滑动输入条',
+          key: 'slider',
+        },
+        {
+          title: 'Picker 基础选择器',
+          key: 'picker',
+        },
+        {
+          title: 'Form 表单',
+          key: 'form',
+        },
+        {
+          title: 'NumberKeyBoard 数字键盘',
+          key: 'number-key-board',
+        },
+        {
+          title: 'ActionSheet 上拉菜单',
+          key: 'action-sheet',
+        },
+        {
+          title: 'Radio 单选框',
+          key: 'radio',
+        },
+        {
+          title: 'Checkbox 多选框',
+          key: 'checkbox',
+        },
+      ],
+    },
+    {
+      title: '数据展示',
+      key: 'components',
+      themeColor: '#D6386B',
+      children: [
+        {
+          title: 'File 文件',
+          key: 'file',
+        },
+        {
+          title: 'Card 卡片',
+          key: 'card',
+        },
+        {
+          title: 'ImagePreview 图片预览',
+          key: 'image-preview',
+        },
+        {
+          title: 'Swipe 轮播图',
+          key: 'swipe',
+        },
+        {
+          title: 'Avatar 头像',
+          key: 'avatar',
+        },
+        {
+          title: 'Collapse 折叠面板',
+          key: 'collapse',
+        },
+        {
+          title: 'List 列表',
+          key: 'list',
+        },
+        {
+          title: 'Popover 气泡卡片',
+          key: 'pop-over',
+        },
+        {
+          title: 'Tag 标签',
+          key: 'tag',
+        },
+        {
+          title: 'Praise 点赞',
+          key: 'praise',
+        },
+        {
+          title: 'Cell 单元格',
+          key: 'cell',
+        },
+        {
+          title: 'Empty 空状态',
+          key: 'empty',
+        },
+      ],
+    },
+    {
+      title: '反馈',
+      key: 'components',
+      themeColor: '#5C57F2',
+      children: [
+        {
+          title: 'InfiniteScroll 无限滚动',
+          key: 'infinite-scroll',
+        },
+        {
+          title: 'Capsule 胶囊',
+          key: 'capsule',
+        },
+        {
+          title: 'SwipeCell 滑动单元格',
+          key: 'swipe-cell',
+        },
+        {
+          title: 'Dialog 对话框',
+          key: 'dialog',
+        },
+        {
+          title: 'Popup 弹出层',
+          key: 'popup',
+        },
+        {
+          title: 'NoticeBar 通知栏',
+          key: 'notice-bar',
+        },
+        {
+          title: 'Overlay 遮罩层',
+          key: 'overlay',
+        },
+        {
+          title: 'Loading 加载中',
+          key: 'loading',
+        },
+        {
+          title: 'Skeleton 骨架屏',
+          key: 'skeleton',
+        },
+        {
+          title: 'PullRefresh 下拉刷新',
+          key: 'pull-refresh',
+        },
+        {
+          title: 'Toast 轻提示',
+          key: 'toast',
+        },
+      ],
+    },
+  ],
+};

@@ -1,0 +1,59 @@
+{
+  "name": "union-design-h5-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "demo": "npx gulp md",
+    "inject": "node config-inject.js",
+    "apidoc": "node ./scripts/apidoc.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node config-inject.js env=development && npx gulp md && export NODE_ENV=production && union-tool run build",
+    "start": "node config-inject.js env=development && npx gulp md && export NODE_ENV=development &&  union-tool run dev",
+    "lint": "eslint --fix --ext .js,.tsx,.ts src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react-dom": "^17.0.5",
+    "@typescript-eslint/eslint-plugin": "^4.24.0",
+    "algoliasearch": "^4.9.1",
+    "classnames": "^2.3.1",
+    "core-js": "^3.19.0",
+    "highlight-for-react": "^1.0.2",
+    "mark-twain": "^2.0.3",
+    "react-instantsearch-dom": "^6.11.0",
+    "union-design": "1.0.40",
+    "union-design-h5": "^1.0.32",
+    "union-tool": "0.1.2",
+    "url-loader": "4.1.1"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-react": "^7.13.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/react-instantsearch-dom": "^6.10.0",
+    "@types/react-router-dom": "^5.1.7",
+    "@typescript-eslint/parser": "^4.24.0",
+    "cross-env": "^7.0.3",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.23.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "file-loader": "^6.2.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "single-line-log": "^1.1.2",
+    "typescript": "^4.2.4"
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  }
+}

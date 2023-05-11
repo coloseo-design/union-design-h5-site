@@ -1,0 +1,63 @@
+.site-typography {
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+.site-typography-without-vertical {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-typography-left {
+  flex: 1;
+  margin-right: 60px;
+}
+
+.site-typography-right {
+  width: 540px
+}
+
+.site-typography-title,
+.site-typography-without-title {
+  font-weight: 400;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0px;
+    font-weight: 400;
+  }
+}
+
+.site-typography-title {
+  margin-bottom: 8px;
+}
+
+.site-typography-descriptions {
+  &-item {
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 2.0;
+
+    text-align: justify;
+    text-justify: inter-cluster;
+
+    &:first-child {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.site-typography-pic {
+  img {
+    width: 100%;
+  }
+}
+
+.site-typography-without-pic,
+.site-typography-without-descriptions {
+  width: 100%;
+}

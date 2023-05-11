@@ -1,0 +1,12 @@
+node_modules/
+lib/
+es/
+dist/
+.idea/
+.DS_Store
+yarn-error.log
+src/utils/config.ts
+src/codes
+src/allDemos
+src/docs
+

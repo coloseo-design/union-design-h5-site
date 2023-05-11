@@ -1,0 +1,151 @@
+.download-source {
+  background: #fff;
+  line-height: 2;
+  color: rgba(0, 0, 0, 0.85);
+  text-align: justify;
+  font-family: PingFangSC-Medium, PingFang SC;
+  .download-header {
+    width: 100%;
+    position: relative;
+    background-image: url('./images/download-bg.png');
+    background-size: cover;
+    background-position: center;
+    height: 336px;
+    padding: 83px 0px 0px 112px;
+  }
+  .load-header {
+    font-size: 56px;
+    font-weight: 600;
+    color: #29292C;
+    line-height: 78px;
+  }
+  .load-desc {
+    margin-top: 26px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #5C6785;
+    line-height: 28px;
+  }
+  .download-section {
+    width: 1366px;
+    margin: 0 auto;
+    .section1 {
+      padding: 89px 196px 76px 112px;
+      .title {
+        font-size: 28px;
+        font-weight: 600;
+        color: #29292C;
+        line-height: 40px;
+      }
+      .containter {
+        display: flex;
+        margin-top: 30px;
+        .current {
+          flex: 1;
+          margin-right: 56px;
+          box-shadow: 2px 4px 9px 0px rgba(209, 210, 215, 0.51);
+          border-radius: 4px;
+          border: 1px solid #F0F0F0;
+          transition: box-shadow 0.2s;
+          position: relative;
+          &:last-child {
+            margin-right: 0px;
+          }
+          &:hover {
+            box-shadow: 2px 4px 8px 0px rgba(209, 210, 215, 0.53), 0px 18px 34px 0px rgba(198, 199, 201, 0.53), 0px 0px 51px 0px rgba(186, 186, 186, 0.18);
+          }
+          .horn {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 59px;
+          }
+          .header-bg {
+            width: 340px;
+          }
+          .current-footer {
+            padding: 24px 0px 29px 24px;
+            .footer-title {
+              font-size: 18px;
+              font-weight: 500;
+              color: #414A63;
+              line-height: 25px;
+            }
+            .footer-des {
+              font-size: 14px;
+              font-weight: 500;
+              color: #9298B5;
+              line-height: 20px;
+              cursor: pointer;
+              font-family: PingFangSC-Medium, PingFang SC;
+              &:last-child {
+                margin-top: 8px;
+              }
+              &:hover {
+                color: #198FFF;
+              }
+              margin-top: 10px;
+              img {
+                width: 20px;
+                height: 20px;
+                margin-left: 11px;
+              }
+            }
+            .footer-hover {
+              &:hover {
+                color: #9298B5;
+              }
+            }
+          }
+        }
+      }
+    }
+    .section2 {
+      padding: 0px 114px 171px 112px;
+      .section-title {
+        font-size: 28px;
+        font-weight: 600;
+        color: #29292C;
+        line-height: 40px;
+      }
+      .section2-containter {
+        display: flex;
+        .sec2-current {
+          margin-right: 24px;
+          padding: 21px 25px 27px 21px;
+          border-radius: 4px;
+          border: 1px solid #F0F0F0;
+          transition: box-shadow 0.2s;
+          &:hover {
+            box-shadow: 0px 2px 16px 0px rgba(202, 203, 208, 0.53), 0px 2px 16px 0px rgba(202, 203, 208, 0.53);
+          }
+          img {
+            width: 240px;
+          }
+          .file-title {
+            margin-top: 24px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #414A63;
+            line-height: 25px;
+            text-shadow: 0px 2px 16px rgba(202, 203, 208, 0.53);
+          }
+          .file-des {
+            font-size: 14px;
+            margin-top: 12px;
+            font-weight: 400;
+            color: #5C6785;
+            line-height: 24px;
+            text-shadow: 0px 2px 16px rgba(202, 203, 208, 0.53);
+          }
+        }
+      }
+    }
+    .section-content {
+      margin-top: 76px;
+      &:first-child {
+        margin-top: 0px;
+      }
+    }
+  }
+}

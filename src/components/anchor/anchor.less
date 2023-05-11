@@ -1,0 +1,52 @@
+.site-anchor-fixed {
+  & [data-class*="item"] {
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 14px 15px;
+    border-left: 1px solid transparent;
+    margin-left: -1px;
+    font-size: 16px;
+    line-height: 22px;
+    position: relative;
+  }
+
+  & [data-class*="item"]:hover {
+    color: #207eea !important;
+  }
+
+  & [data-class*="actived-true"] {
+    color: #207eea !important;
+    border-left: 1px solid #207eea;
+    &::before {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      z-index: 10;
+      content: ' ';
+      width: 1px;
+      background-color: #207eea;
+    }
+  }
+}
+
+.site-anchor-static {
+  & > div {
+    margin-left: 16px;
+  }
+  
+  & [data-class*="item"] {
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    line-height: 29px;
+  }
+
+  & [data-class*="item"] + [data-class*="item"] {
+    margin-top: 16px;
+  }
+}
