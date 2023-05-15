@@ -58,7 +58,7 @@ const ToastDemo = () => (
         <Icon type="right" />
       </div>
       <div
-        style={{ ...style, border: 'none' }}
+        style={{ ...style }}
         onClick={() => Toast.info({ icon: <Loading color="#fff" /> })}
       >
         <div>小提示框2</div>
