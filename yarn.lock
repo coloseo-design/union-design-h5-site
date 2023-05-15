@@ -10961,10 +10961,10 @@ unified@^4.1.1:
     trough "^1.0.0"
     vfile "^1.0.0"
 
-union-design-h5@^1.0.32:
-  version "1.0.33"
-  resolved "https://npm.coloseo.online/union-design-h5/-/union-design-h5-1.0.33.tgz#c0edf60a1b76bae3b226a0119fb4edf749eda635"
-  integrity sha512-pn64XpzLXQXYyuBm230YpmSa2vGqrWypkk2QK79qJxrhdtiPiUWCB5ntF7vcaRV6t0ACPG0nfuoyA74eZEMTgA==
+union-design-h5@^1.0.34:
+  version "1.0.34"
+  resolved "https://npm.coloseo.online/union-design-h5/-/union-design-h5-1.0.34.tgz#f3b5fbfc7d943dd17ab55d429d2f0634da37f29d"
+  integrity sha512-ohp2M1TPiduhJXrOOfp7Gy4r8LEKW2fCwNV1NWi3bBl78ypNR6Od7jC0ZAJI1dtV1lQ3jezaGS7Rz4EKOP/SLg==
   dependencies:
     "@uni/icons-react" "^2.0.2"
     async-validator "^3.5.1"

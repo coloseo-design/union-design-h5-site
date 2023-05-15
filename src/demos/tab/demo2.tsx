@@ -7,7 +7,6 @@ import { Tab } from 'union-design-h5';
 // start 作为页面滚动导航 // end
 const Demo2 = () => {
   const [selectKey, setKey] = useState('1');
-  const [top, setTop] = useState(0);
   const tabHeight = 86;
   const content = Array.from({ length: 25 }).map((_, k) => (
     <p key={k}>页面内容页面内容页面内容页面内容页面内容页面内容</p>
@@ -30,26 +29,38 @@ const Demo2 = () => {
     },
   ];
 
-  const handleChange = (key: string) => {
+  const handleChange = React.useCallback((key: string) => {
     const element = document.getElementById(`标签${key}`);
-    // if (element) {
-    //   element?.scrollIntoView();
-    //   window.scrollTo({
-    //     top: window.scrollY - tabHeight,
-    //   });
-    // }
-  };
+    element?.scrollIntoView();
+    if (element) {
+      element?.scrollIntoView();
+      window.scrollTo({
+        top: window.scrollY - tabHeight,
+      });
+    }
+  }, []);
+
   const scroll = () => {
     const { scrollTop } = document.documentElement;
     let key = selectKey;
-    tabsData.forEach((item) => {
-      const itemTop = document.getElementById(`${item.title}`)?.offsetTop || 0;
-      if (scrollTop >= itemTop) {
-        if (selectKey !== item.key) {
-          key = item.key;
-        }
+    for (const item of tabsData) {
+      const el = document.getElementById(`${item.title}`);
+      if (!el) continue;
+      const rect = el?.getBoundingClientRect();
+      if (rect.top <= tabHeight) {
+        key = item.key;
+      } else {
+        break;
       }
-    });
+    }
+    // tabsData.forEach((item) => {
+    //   const itemTop = document.getElementById(`${item.title}`)?.offsetTop || 0;
+    //   if (scrollTop >= itemTop) {
+    //     if (selectKey !== item.key) {
+    //       key = item.key;
+    //     }
+    //   }
+    // });
     setKey(key);
   };
 

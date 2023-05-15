@@ -1,7 +1,7 @@
 import React from 'react';
 import { ButtonList } from 'union-design-h5';
 
-// start buttonList 默认样式（两个按钮） // end
+// start buttonList 一个按钮 // end
 const Demo = () => {
   const iconList = [
     {
@@ -21,33 +21,45 @@ const Demo = () => {
     },
   ];
 
-  const buttonList = [
-    {
-      name: '发送',
-      onClick: () => console.log('发送'),
-    },
-    {
-      name: '按钮',
-      type: 'primary',
-      onClick: () => console.log('按钮'),
-    },
-  ];
-
   return (
     <div style={{ backgroundColor: 'rgba(0,0,0,0.02)', margin: '24px -12px' }}>
       <ButtonList
         iconButtonList={iconList.slice(0, 1)}
-        buttonList={buttonList}
+        buttonList={[
+          {
+            type: 'primary',
+            name: '发送',
+            onClick: () => {
+              console.log('==eeee');
+            },
+          },
+        ]}
       />
       <div style={{ height: 20 }} />
       <ButtonList
         iconButtonList={iconList.slice(0, 2)}
-        buttonList={buttonList}
+        buttonList={[
+          {
+            type: 'primary',
+            name: '发送',
+            onClick: () => {
+              console.log('==eeee');
+            },
+          },
+        ]}
       />
       <div style={{ height: 20 }} />
       <ButtonList
         iconButtonList={iconList.slice(0, 3)}
-        buttonList={buttonList}
+        buttonList={[
+          {
+            type: 'primary',
+            name: '发送',
+            onClick: () => {
+              console.log('==eeee');
+            },
+          },
+        ]}
       />
     </div>
   );
