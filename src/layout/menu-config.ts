@@ -178,6 +178,10 @@ export default {
           key: 'date-picker',
         },
         {
+          title: 'TimePicker 时间选择',
+          key: 'time-picker',
+        },
+        {
           title: 'Calendar 日历',
           key: 'calendar',
         },
