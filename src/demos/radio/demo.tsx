@@ -6,10 +6,11 @@ const RadioDemo = () => (
     <div>
       <p style={{ margin: '28px 0px 16px 16px' }}>基本样式</p>
       <div style={{ backgroundColor: '#fff', padding: '8px 16px' }}>
-        <Radio onChange={(checked) => console.log('checked', checked)}>单选框（默认）</Radio>
+        <Radio onChange={(checked: boolean) => console.log('checked', checked)}>单选框（默认）</Radio>
         <Radio checked>单选框（选中）</Radio>
         <Radio disabled>单选框（禁止）</Radio>
         <Radio disabled checked>单选框（选中且禁止）</Radio>
+        <Radio defaultChecked>单选框（默认选中）</Radio>
       </div>
     </div>
 
@@ -42,7 +43,7 @@ const RadioDemo = () => (
       <p style={{ margin: '28px 0px 16px 16px' }}>group里写radio</p>
       <div style={{ backgroundColor: '#fff', padding: '8px 16px' }}>
         <Radio.Group
-          defaultValue="B"
+          value="B"
           disabled={false}
           onChange={(value) => console.log('value', value)}
         >
@@ -52,7 +53,31 @@ const RadioDemo = () => (
         </Radio.Group>
       </div>
     </div>
-
+    <div>
+      <p style={{ margin: '28px 0px 16px 16px' }}>radio 组默认选中</p>
+      <div style={{ backgroundColor: '#fff', padding: '8px 16px' }}>
+        <Radio.Group
+          defaultValue="C"
+          disabled={false}
+          onChange={(values: any) => console.log('values', values)}
+          options={[
+            {
+              value: 'A',
+              label: 'A',
+              disabled: true,
+            },
+            {
+              value: 'B',
+              label: 'B',
+            },
+            {
+              value: 'C',
+              label: 'C',
+            },
+          ]}
+        />
+      </div>
+    </div>
   </>
 );
 

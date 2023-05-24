@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import React, { useState } from 'react';
-import { ActionSheet, Icon } from 'union-design-h5';
+import { ActionSheet, Icon, Toast } from 'union-design-h5';
 
 const a1 = require('./images/a1.png');
 const a2 = require('./images/a2.png');
@@ -103,6 +103,7 @@ const DemoAction = () => {
       <ActionSheet
         visible={visible}
         onCancel={() => setVisible(false)}
+        onSelect={(opt) => Toast.info({ content: `您选择了：${opt.name}` })}
         options={options}
       />
       <ActionSheet

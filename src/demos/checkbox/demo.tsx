@@ -11,10 +11,11 @@ const CheckboxDemo = () => (
     <div>
       <p style={{ margin: '28px 0px 16px 16px' }}>基本样式</p>
       <div style={{ backgroundColor: '#fff', padding: '8px 16px' }}>
-        <Checkbox style={style} onChange={(checked: boolean) => console.log('checked', checked)}>复选框（默认）</Checkbox>
+        <Checkbox style={style} onChange={(checked: boolean) => console.log('checked', checked)}>复选框（基础）</Checkbox>
         <Checkbox style={style} checked>复选框（选中）</Checkbox>
         <Checkbox style={style} disabled>复选框（禁止）</Checkbox>
         <Checkbox style={style} disabled checked>复选框（选中且禁止）</Checkbox>
+        <Checkbox style={style} defaultChecked>复选框（默认选中）</Checkbox>
       </div>
     </div>
 
@@ -58,7 +59,30 @@ const CheckboxDemo = () => (
         </Checkbox.Group>
       </div>
     </div>
-
+    <div>
+      <p style={{ margin: '28px 0px 16px 16px' }}>Checkbox组默认选中</p>
+      <div style={{ backgroundColor: '#fff', padding: '8px 16px' }}>
+        <Checkbox.Group
+          defaultValue={['A', 'B']}
+          className="checkGroup"
+          onChange={(values: string[]) => console.log('values', values)}
+          options={[
+            {
+              value: 'A',
+              label: 'A',
+            },
+            {
+              value: 'B',
+              label: 'B',
+            },
+            {
+              value: 'C',
+              label: 'C',
+            },
+          ]}
+        />
+      </div>
+    </div>
   </>
 );
 
