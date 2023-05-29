@@ -3964,7 +3964,7 @@ dateformat@^3.0.0:
   resolved "https://npm.coloseo.online/dateformat/-/dateformat-3.0.3.tgz#a6e37499a4d9a9cf85ef5872044d62901c9889ae"
   integrity sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==
 
-dayjs@^1.10.4:
+dayjs@^1.10.4, dayjs@^1.11.7:
   version "1.11.7"
   resolved "https://npm.coloseo.online/dayjs/-/dayjs-1.11.7.tgz#4b296922642f70999544d1144a2c25730fce63e2"
   integrity sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==
@@ -10961,15 +10961,15 @@ unified@^4.1.1:
     trough "^1.0.0"
     vfile "^1.0.0"
 
-union-design-h5@^1.0.34:
-  version "1.0.34"
-  resolved "https://npm.coloseo.online/union-design-h5/-/union-design-h5-1.0.34.tgz#f3b5fbfc7d943dd17ab55d429d2f0634da37f29d"
-  integrity sha512-ohp2M1TPiduhJXrOOfp7Gy4r8LEKW2fCwNV1NWi3bBl78ypNR6Od7jC0ZAJI1dtV1lQ3jezaGS7Rz4EKOP/SLg==
+union-design-h5@^1.0.40:
+  version "1.0.40"
+  resolved "https://npm.coloseo.online/union-design-h5/-/union-design-h5-1.0.40.tgz#b1005f92df135968213de748c6d6befaeac29fe4"
+  integrity sha512-pJwT4xhZRswkRgbwbbl3gz4ysJis0J8+L7p8Dt+kbcexg9zB0B8XGrotO78Ft9IBFpm3RX0cuq3FROQMXkzFfQ==
   dependencies:
     "@uni/icons-react" "^2.0.2"
     async-validator "^3.5.1"
     classnames "^2.2.6"
-    dayjs "^1.10.4"
+    dayjs "^1.11.7"
     omit.js "^1.0.2"
 
 union-design@1.0.40:

@@ -237,6 +237,10 @@ export default {
           key: 'card',
         },
         {
+          title: 'ApproveCard 审批卡片',
+          key: 'approve-card',
+        },
+        {
           title: 'ImagePreview 图片预览',
           key: 'image-preview',
         },

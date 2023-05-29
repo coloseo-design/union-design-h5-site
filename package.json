@@ -25,7 +25,7 @@
     "mark-twain": "^2.0.3",
     "react-instantsearch-dom": "^6.11.0",
     "union-design": "1.0.40",
-    "union-design-h5": "^1.0.34",
+    "union-design-h5": "^1.0.40",
     "union-tool": "0.1.2",
     "url-loader": "4.1.1"
   },
