@@ -137,17 +137,33 @@ function apidoc() {
         data.content.forEach((element) => {
           if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(element[0]) && typeof element[1] === 'string') {
             Object.assign(resultContent, {
-              [`${chunk.stem.replace(/\s|\./g, '')}-${element[1].replace(/\s|\./g, '')}`]: [element[1]],
+              // [`${chunk.stem.replace(/\s|\./g, '')}-${element[1].replace(/\s|\./g, '')}`]: [element[1]],
+              [`${chunk.stem.replace(/\s|\./g, '')}-${element[1].replace(/\s|\./g, '')}`]: element[1],
             });
           }
         });
-        const result = `/* eslint-disable comma-dangle */\n/* eslint-disable comma-spacing */\n/* eslint-disable key-spacing */\n/* eslint-disable object-curly-newline */\n/* eslint-disable object-curly-spacing */\nmodule.exports = {\n  name: ${JSON.stringify(resultName).replace(/\"/g, "'")},\n  content: ${JSON.stringify(resultContent).replace(/\"/g, "'")}\n};\n`;
+        // const result = `/* eslint-disable comma-dangle */\n/* eslint-disable comma-spacing */\n/* eslint-disable key-spacing */\n/* eslint-disable object-curly-newline */\n/* eslint-disable object-curly-spacing */\nmodule.exports = {\n  name: ${JSON.stringify(resultName).replace(/\"/g, "'")},\n  content: ${JSON.stringify(resultContent).replace(/\"/g, "'")}\n};\n`;
+        const result = `/* eslint-disable */\nexport default {\n  dirName: ${JSON.stringify(chunk.stem)},\n  name: ${JSON.stringify(resultName).replace(/\"/g, "'")},\n  content: ${JSON.stringify(resultContent).replace(/\"/g, "'")}\n};\n`;
         chunk.contents = Buffer.from(result);
         chunk.stem = 'apidoc';
-        chunk.extname = '.js';
+        chunk.extname = '.ts';
         callback(null, chunk);
       }
     }))
+    .pipe(dest(config.to.doc));
+}
+
+function apidocEntry() {
+  return src(path.resolve('src', 'docs/**/apidoc.ts'))
+    .pipe(through2.obj((file, encoding, callback) => {
+      const splited = file.path.split(path.sep);
+      const current = splited[splited.length - 2];
+      const content = '/* eslint-disable */\nexport { default as #{ComponentTitle} } from \'./#{title}/apidoc\';';
+      const result = content.replace(/#{title}/g, current).replace(/#{ComponentTitle}/g, rename(current));
+      file.contents = Buffer.from(result);
+      callback(null, file);
+    }))
+    .pipe(concat('apidocEntry.ts'))
     .pipe(dest(config.to.doc));
 }
 
@@ -206,6 +222,7 @@ exports.md = series([
   markdown,
   entry,
   apidoc,
+  apidocEntry,
   testDemoEntry,
   testCodeEntry,
 ]);

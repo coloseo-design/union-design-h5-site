@@ -16,7 +16,7 @@ import { BackTop } from 'union-design';
 import './layout.less';
 import Menus, { Menu } from './menus';
 // import Anchor from '../components/anchor';
-import Search from './search';
+import Search from './search-new';
 
 const logo = require('../assets/images/logo.png');
 const dropdown = require('../assets/images/dropdown.png');

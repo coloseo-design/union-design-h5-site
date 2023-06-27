@@ -47,7 +47,7 @@ export const BasePageComponent: React.FC<PageProps> = (props) => {
       <div style={{ width: '100%' }}>
         {element(title)}
         <article>
-          <h2 style={{ marginTop: 48 }}>代码演示</h2>
+          <h2 style={{ marginTop: 48 }} id={`${name}-代码演示`}>代码演示</h2>
         </article>
       </div>
       {testCurrent.map((item: any[], idx: number) => (
@@ -59,7 +59,7 @@ export const BasePageComponent: React.FC<PageProps> = (props) => {
         </div>
       ))}
       <article>
-        <h2 style={{ marginTop: 48 }}>API</h2>
+        <h2 style={{ marginTop: 48 }} id={`${name}-API`}>API</h2>
       </article>
       <div
         style={{
